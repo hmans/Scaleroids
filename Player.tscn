@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4byry2n74ryn"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_iydfb"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4snmr"]
+radius = 0.5
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q2mn5"]
+albedo_color = Color(1, 0.0196078, 0.0823529, 1)
+
+[node name="Player" type="RigidBody3D"]
+mode = 3
+script = ExtResource( "1_iydfb" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource( "SphereMesh_4snmr" )
+surface_material_override/0 = SubResource( "StandardMaterial3D_q2mn5" )
+script = null

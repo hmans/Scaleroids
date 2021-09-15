@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="Scaleroids"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
+
+[physics]
+
+3d/default_gravity=0.0
 
 [rendering]
 

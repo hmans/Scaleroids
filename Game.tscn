@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt4tracm0ty0k"]
+
+[ext_resource type="PackedScene" uid="uid://caoqigqrcllqi" path="res://Asteroid.tscn" id="1_fct7g"]
+[ext_resource type="PackedScene" uid="uid://c4byry2n74ryn" path="res://Player.tscn" id="2_tgvro"]
+
+[sub_resource type="Environment" id="Environment_ya413"]
+ambient_light_source = 2
+ambient_light_color = Color(0.388235, 0.466667, 0.423529, 1)
+glow_enabled = true
+glow_bloom = 0.12
+
+[node name="Game" type="Node3D"]
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.970093, 0.242735, 0, -0.242735, 0.970093, 0, 1.43426, 3.85578)
+script = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_ya413" )
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.765101, -0.310383, 0.564165, 0, 0.876155, 0.482029, -0.64391, -0.368801, 0.670348, 3.05628, 2.4797, 2.48158)
+script = null
+
+[node name="Asteroid" parent="." instance=ExtResource( "1_fct7g" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11725, 0, -3.17995)
+
+[node name="Asteroid2" parent="." instance=ExtResource( "1_fct7g" )]
+transform = Transform3D(0.71562, 0, -0.69849, 0, 1, 0, 0.69849, 0, 0.71562, -3.52196, 0.290203, -3.66855)
+
+[node name="Player" parent="." instance=ExtResource( "2_tgvro" )]
